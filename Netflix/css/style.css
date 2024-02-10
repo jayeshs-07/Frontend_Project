@@ -119,6 +119,7 @@ input{
     background-color: rgba(0, 0, 0, 0);
     border-radius: 5px;
     padding: 15px;
+    color: #ffffff;
     border: 1 solid;
     border-color: #ffffff;
 }
@@ -143,6 +144,7 @@ input{
 .smart_tv_section{
     background-color: black;
     width: 100%;
+    padding: 40px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -167,9 +169,26 @@ input{
 }
 .fixed_img{
     width: 50%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.tv_video{
+    z-index: 0;
+    overflow: hidden;
+    width: 59%;
+    height: 100%;
+    max-width: 73%;
+    max-height: 55%;
+    position: absolute;
+    top: 21%;
+    left: 21%;
 }
 .fixed_img img{
     width: 80%;
+    position: relative;
+    z-index: 1;
 }
 .fixed-para{
     margin-top: 15px;
@@ -178,6 +197,7 @@ input{
 .item_tv_section{
     background-color: black;
     width: 100%;
+    padding: 40px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -221,7 +241,7 @@ input{
     
 }
 .faq_inner{
-    width: 90%;
+    width: 100%;
     gap: 20px;
     display: flex;
     justify-content: center;
@@ -262,7 +282,7 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 40px;
 }
 .footer_inner{
     width:90%;
@@ -290,14 +310,90 @@ footer{
     list-style: none;
     margin-top: 10px;
     color: #ffffff;
+    font-size: 14px;
+    font-weight: 200;
+    cursor: pointer;
     text-decoration: underline;
 }
 .footer-language-dropdown{
     width: 100%;
     margin-top: 20px;
+    font-size: 14px !important;
 }
 .footer-para{
     text-align: left;
     margin-top: 20px;
     font-size: 16px;
+}
+@media only screen and (min-width:320px) and (max-width:480px) {
+
+    h1, h2, h3, h4, h5, h6{
+        font-size: 22px;
+    }
+    .header_text h1, p{
+        font-size: 16px !important;
+    }
+    input{
+        width: 80%;
+    }
+    .header_inner{
+        text-align: center;
+    }
+    .navbar{
+        padding: 20px;
+    }
+    .navbar_logo img{
+        width: 100px;
+    }
+    .form_input_header{
+        flex-direction: column;
+        align-items: center;
+    }
+    .dropdown-language{
+        font-size: 14px;
+        width: 45%;
+    }
+    .Signin_btn{
+        font-size: 14px;
+    }
+    .get_btn{
+        width: 80%;
+        padding: 15px;
+        margin: 10px 0 0 0;
+        font-size: 16px;
+    }
+    .smart_tv_inner{
+        display: flex;
+        flex-direction: column;
+    }
+    .fixed_text{
+        width: 100%;
+        text-align: center;
+    }
+    .fixed-para{
+        text-align: center !important;
+    }
+    .fixed_img{
+        width: 100%;
+    }
+    .tv_video{
+        width: 60%;
+        height: 70%;
+        max-width: 60%;
+        max-height: 70%;
+        top: 6%;
+    }
+    .item_tv_inner{
+        display: flex;
+        flex-direction: column;
+    }
+    .item_fixed_img{
+        width: 100%;
+    }
+    .item_fixed_text{
+        width: 100%;
+    }
+    footer{
+        padding: 15px;
+    }
 }
