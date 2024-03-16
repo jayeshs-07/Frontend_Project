@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./css/style.css">
 
     <!-- font link -->
-    
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;500;600;700;800&display=swap"
         rel="stylesheet">
 
@@ -139,27 +139,66 @@
                         <p class="faq_para">What is Netflix?</p>
                         <i class="fa-solid fa-plus faq_plus"></i>
                     </div>
+                    <div class="faq_ans">
+                        Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies,
+                        anime, documentaries and more-on thousands of internet-connected devices.
+
+                        You can watch as much as you want, whenever you want, without a single ad-all for one low
+                        monthly price. There's always something new to discover, and new TV shows and movies are
+                        added every week!
+                    </div>
                     <div class="faq_item">
                         <p class="faq_para">How much does Netflix cost?</p>
                         <i class="fa-solid fa-plus faq_plus"></i>
+                    </div>
+                    <div class="faq_ans">
+                        Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one
+                        fixed monthly fee. Plans range from ₹649 to ₹149 a month. No extra costs, no contracts.
                     </div>
                     <div class="faq_item">
                         <p class="faq_para">Where can I watch?</p>
                         <i class="fa-solid fa-plus faq_plus"></i>
                     </div>
+                    <div class="faq_ans">
+                        Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the web at
+                        netflix.com from your personal computer or on any internet-connected device that offers the
+                        Netflix app, including smart TVs, smartphones, tablets, streaming media players and game
+                        consoles.
+
+                        You can also download your favourite shows with the iOS, Android, or Windows 10 app. Use
+                        downloads to watch while you're on the go and without an internet connection. Take Netflix with
+                        you anywhere.
+
+                    </div>
                     <div class="faq_item">
                         <p class="faq_para">How do I cancel?</p>
                         <i class="fa-solid fa-plus faq_plus"></i>
+                    </div>
+                    <div class="faq_ans">
+                        Netflix is flexible. There are no annoying contracts and no commitments. You can easily cancel
+                        your account online in two clicks. There are no cancellation fees – start or stop your account
+                        anytime.
                     </div>
                     <div class="faq_item">
                         <p class="faq_para">What can I watch on Netflix?</p>
                         <i class="fa-solid fa-plus faq_plus"></i>
                     </div>
+                    <div class="faq_ans">
+                        Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning
+                        Netflix originals, and more. Watch as much as you want, anytime you want.
+                    </div>
                     <div class="faq_item">
                         <p class="faq_para">Is Netflix good for kids?</p>
-                        <i class="fa-solid fa-plus faq_plus"></i>
+                        <i class="fa-solid fa-plus faq_plus "></i>
                     </div>
-                    
+                    <div class="faq_ans">
+                        The Netflix Kids experience is included in your membership to give parents control while kids
+                        enjoy family-friendly TV shows and films in their own space.
+
+                        Kids profiles come with PIN-protected parental controls that let you restrict the maturity
+                        rating of content kids can watch and block specific titles you don’t want kids to see.
+                    </div>
+
                 </div>
                 <div class="form_header">
                     <p>
@@ -167,7 +206,8 @@
                     </p>
                     <div class="form_input_header">
                         <input type="text" placeholder="Email Address">
-                        <button class="get_btn">Get Started <i class="fa-solid fa-chevron-right right_arrow"></i></button>
+                        <button class="get_btn">Get Started <i
+                                class="fa-solid fa-chevron-right right_arrow"></i></button>
                     </div>
                 </div>
             </div>
@@ -177,7 +217,7 @@
     <footer>
         <div class="footer_inner">
             <div class="contact_us">Questions? Call <a href="#">>000-800-100-8343</a></div>
-                
+
             <div class="footer_list">
                 <ul class="footer_ul">
                     <li>FAQ</li>
@@ -212,6 +252,21 @@
             </div>
         </div>
     </footer>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.faq_plus').click(function () {
+                $(this).toggleClass('fa-plus fa-xmark');
+                var faqItem = $(this).closest('.faq_item');
+                var faqAns = faqItem.next('.faq_ans');
+                faqAns.slideToggle(500);
+                $('.faq_ans').not(faqAns).slideUp(500);
+                $('.faq_plus').not($(this)).removeClass('fa-xmark').addClass('fa-plus');
+                $('.faq_ans').css({ 'display': 'none' });
+                faqAns.css({ 'display': 'flex', 'flex-direction': 'column' });
+            });
+        });
+    </script>
 </body>
 
 </html>

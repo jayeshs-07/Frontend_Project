@@ -266,6 +266,18 @@ input{
     margin-top: 10px;
     cursor: pointer;
 }
+.faq_ans{
+    width: 100%;
+    background-color: #80808045;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    margin-top: 5px;
+    color: #ffffff;
+    font-size: 20px;
+    cursor: pointer;
+}
 .faq_item:hover{
     background-color: #414141;
 }
